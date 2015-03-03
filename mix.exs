@@ -23,6 +23,7 @@ defmodule TodoBackend.Mixfile do
   # Type `mix help deps` for examples and options
   defp deps do
     [{:phoenix, "~> 0.9.0"},
+     {:cors_plug, "~> 0.1.2"},
      {:cowboy, "~> 1.0"}]
   end
 end
