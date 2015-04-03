@@ -6,6 +6,7 @@ defmodule TodoBackend.Router do
     plug :fetch_session
     plug :fetch_flash
     plug :protect_from_forgery
+    plug CORSPlug
   end
 
   pipeline :api do

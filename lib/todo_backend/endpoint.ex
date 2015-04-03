@@ -27,6 +27,5 @@ defmodule TodoBackend.Endpoint do
     encryption_salt: "4VgcEw2o"
 
   plug :router, TodoBackend.Router
-
-  plug CORSPlug
+  
 end
