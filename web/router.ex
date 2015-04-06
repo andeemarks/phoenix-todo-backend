@@ -2,7 +2,7 @@ defmodule TodoBackend.Router do
   use Phoenix.Router
 
   pipeline :browser do
-    plug :accepts, ~w(html)
+    plug :accepts, ~w(html json)
     plug :fetch_session
     plug :fetch_flash
     # plug :protect_from_forgery
@@ -17,9 +17,9 @@ defmodule TodoBackend.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    post "/", PageController, :index
+    post "/", PageController, :create
     options "/", PageController, :index
-    delete "/", PageController, :index
+    delete "/", PageController, :delete
   end
 
   # Other scopes may use custom stacks.
